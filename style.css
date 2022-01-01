@@ -1,0 +1,46 @@
+*,
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  background-color: #161616;
+  color: #cfcfcf;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.countup,
+.countdown {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+}
+.demo {
+  font-family: "Orbitron", monospace;
+  width: 80vw;
+  background-color: #dddddd;
+  color: #000000;
+}
+.footer {
+  margin-top: 50px;
+}
+.credit {
+  color: #696969;
+  font-weight: 100;
+}
+@media (min-width: 800px) {
+  .content {
+    font-size: 200%;
+  }
+}
