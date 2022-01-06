@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0%;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poiret One", cursive;
   font-weight: 300;
   background-color: #161616;
   color: #cfcfcf;
@@ -27,7 +27,7 @@ body {
   align-items: center;
 }
 .demo {
-  font-family: "Orbitron", monospace;
+  font-family: "Poiret One", cursive;
   width: 80vw;
   background-color: #dddddd;
   color: #000000;
@@ -43,4 +43,30 @@ body {
   .content {
     font-size: 200%;
   }
+}
+.dm {
+  margin-top: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.darkmodelink {
+  border: none;
+  background: #1f1f1f;
+  width: 50px;
+  height: 50px;
+  border-radius: 45px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-align: center;
+}
+.darkmodelink:hover {
+  text-shadow: 0 0 3px #a3a3a3;
+}
+
+.dark-mode {
+  filter: invert(100%);
 }
