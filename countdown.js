@@ -24,3 +24,21 @@ var x = setInterval(function() {
     document.getElementById("demo2").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+// Dark mode function
+function darkMode() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+// Button text change
+const btn = document.getElementById("btn");
+
+btn.addEventListener("click", ()=>{
+
+    if(btn.innerText === "light:off"){
+        btn.innerText = "light:on";
+    }else{
+        btn.innerText= "light:off";
+    }
+})
