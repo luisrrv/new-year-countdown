@@ -8,6 +8,7 @@ body {
   font-weight: 300;
   background-color: #161616;
   color: #cfcfcf;
+  transition: 500ms;
 }
 .content {
   display: flex;
@@ -52,7 +53,7 @@ body {
   text-align: center;
 }
 
-.darkmodelink {
+.darkmodebutton {
   border: none;
   background: #1f1f1f;
   width: 50px;
@@ -62,6 +63,8 @@ body {
   cursor: pointer;
   font-size: 0.8rem;
   text-align: center;
+  user-select: none;
+  animation: glowing 4000ms infinite;
 }
 .darkmodelink:hover {
   text-shadow: 0 0 3px #a3a3a3;
@@ -69,4 +72,16 @@ body {
 
 .dark-mode {
   filter: invert(100%);
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px 2px #292929;
+  }
+  50% {
+    box-shadow: 0 0 5px 2px #696969;
+  }
+  100% {
+    box-shadow: 0 0 5px 2px #292929;
+  }
 }
