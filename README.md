@@ -1,5 +1,5 @@
-# new-year-countdown
-a simple count since the year started and countdown until the next year arrives.
+# New Year Countdown
+A simple count since the year started and countdown until the next year arrives.
 
 <p float="left">
   <img src="https://user-images.githubusercontent.com/69304255/172343358-4446fa6d-905b-44c8-baf4-789cbec7aeba.png" width="300" />
