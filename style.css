@@ -10,6 +10,12 @@ body {
   color: #cfcfcf;
   transition: 500ms;
 }
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+}
 .content {
   display: flex;
   flex-direction: column;
@@ -18,7 +24,8 @@ body {
   height: 100vh;
 }
 .countup,
-.countdown {
+.countdown,
+.luisxxx {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -27,12 +34,18 @@ body {
   justify-content: center;
   align-items: center;
 }
+#demo1,
+#demo2,
+#demo3 {
+  font-size: 2rem;
+}
 .demo {
   font-family: "Poiret One", cursive;
   width: 80vw;
   background-color: #dddddd;
   color: #000000;
   border-radius: 20px;
+  font-size: 1.2rem;
 }
 .footer {
   margin-top: 50px;
@@ -44,6 +57,9 @@ body {
 @media (min-width: 800px) {
   .content {
     font-size: 200%;
+  }
+  .credit {
+    font-size: 1rem;
   }
 }
 .dm {
