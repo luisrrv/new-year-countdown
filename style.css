@@ -34,6 +34,13 @@ a:visited {
   justify-content: center;
   align-items: center;
 }
+.luisxxx h1 {
+  color: white;
+  background-color: rgb(72, 42, 245);
+}
+.dark-mode .luisxxx h1 {
+  filter: invert(100%);
+}
 #demo1,
 #demo2,
 #demo3 {
@@ -60,6 +67,9 @@ a:visited {
   }
   .credit {
     font-size: 1rem;
+  }
+  .demo {
+    max-width: 60%;
   }
 }
 .dm {
