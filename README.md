@@ -7,4 +7,4 @@ A simple count since the year started and countdown until the next year arrives.
   <img src="https://user-images.githubusercontent.com/69304255/172343383-5e4d2377-ce32-42d1-83d9-399d5503938e.png" width="300" /> 
 </p>
 
-Check it out ➡️ https://codepen.io/luisrrv/full/vYeRgXp
+Check it out ➡️ https://luisrrv-countdown.netlify.app/
