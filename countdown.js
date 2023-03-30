@@ -64,9 +64,9 @@ function darkMode() {
 const btn = document.getElementById("btn");
 
 btn.addEventListener("click", ()=>{
-    if(btn.innerText === "light:off"){
-        btn.innerText = "light:on";
+    if(btn.innerHTML === `<i class="fas fa-sun"></i>`){
+        btn.innerHTML = `<i class="fas fa-moon"></i>`;
     }else{
-        btn.innerText= "light:off";
+        btn.innerHTML= `<i class="fas fa-sun"></i>`;
     }
 })

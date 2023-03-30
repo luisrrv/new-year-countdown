@@ -34,13 +34,29 @@ a:visited {
   justify-content: center;
   align-items: center;
 }
-.luisxxx h1 {
-  color: white;
+.luisxxx {
+  border: 1px solid rgb(72, 42, 245);
   background-color: rgb(72, 42, 245);
+  margin-bottom: 8px;
+  border-radius: 24px;
 }
-.dark-mode .luisxxx h1 {
-  filter: invert(100%);
+.luisxxx h1 {
+  font-size: 20px;
+  color: #dddddd;
+  background-color: transparent;
 }
+.luisxxx p {
+  background-color: transparent;
+}
+.dark-mode .luisxxx {
+  border-color: #B5D500;
+  background-color: #B5D500;
+}
+.dark-mode .luisxxx h1,
+.dark-mode .luisxxx p {
+  color: #161616;
+}
+
 #demo1,
 #demo2,
 #demo3 {
@@ -99,6 +115,9 @@ a:visited {
 
 .dark-mode {
   filter: invert(100%);
+}
+i {
+  font-size: 20px;
 }
 
 @keyframes glowing {
