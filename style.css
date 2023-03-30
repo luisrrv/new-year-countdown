@@ -35,27 +35,26 @@ a:visited {
   align-items: center;
 }
 .luisxxx {
-  border: 1px solid rgb(72, 42, 245);
-  background-color: rgb(72, 42, 245);
+  background-color: #cfcfcf;
   margin-bottom: 8px;
   border-radius: 24px;
 }
 .luisxxx h1 {
   font-size: 20px;
-  color: #dddddd;
+  color: #161616;
   background-color: transparent;
 }
 .luisxxx p {
   background-color: transparent;
+  color: #161616;
 }
-.dark-mode .luisxxx {
-  border-color: #B5D500;
-  background-color: #B5D500;
+/* .dark-mode .luisxxx {
+  filter: invert(0%);
 }
 .dark-mode .luisxxx h1,
 .dark-mode .luisxxx p {
-  color: #161616;
-}
+  filter: invert(0%);
+} */
 
 #demo1,
 #demo2,
