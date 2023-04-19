@@ -36,8 +36,9 @@ a:visited {
 }
 .luisxxx {
   background-color: #cfcfcf;
-  margin-bottom: 8px;
+  margin-bottom: 28px;
   border-radius: 24px;
+  box-shadow: 0 5px 0 0 rgb(210, 210, 210), 0 10px 0 0 rgba(225, 225, 225, 0.6), 0 15px 0 0 rgba(159, 160, 159, 0.4), 0 20px 0 0 rgba(128, 128, 128, 0.2), 0 25px 0 0 rgba(78, 78, 78, 0.1);
 }
 .luisxxx h1 {
   font-size: 20px;
@@ -48,6 +49,10 @@ a:visited {
   background-color: transparent;
   color: #161616;
 }
+.countup,
+.countdown {
+  background-color: transparent;
+}
 /* .dark-mode .luisxxx {
   filter: invert(0%);
 }
@@ -55,6 +60,9 @@ a:visited {
 .dark-mode .luisxxx p {
   filter: invert(0%);
 } */
+i {
+  background-color: transparent;
+}
 
 #demo1,
 #demo2,
