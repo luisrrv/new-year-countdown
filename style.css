@@ -123,6 +123,7 @@ i {
 }
 .footer {
   margin-top: 50px;
+  margin-bottom: 20px;
 }
 .credit {
   color: #696969;
@@ -178,6 +179,7 @@ input.ipt {
   min-height: 2.5rem;
   min-width: 180px;
   padding: 12px 12px;
+  display: inline-block;
 }
 input.ipt::placeholder {
   color: #161616;
