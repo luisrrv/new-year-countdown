@@ -94,7 +94,7 @@ a:visited {
 .countdown {
   background-color: transparent;
 }
-.dark-mode input[type=datetime-local] {
+.dark-mode input.ipt {
   filter: invert(100%);
 }
 /* .dark-mode .luisxxx h1,
@@ -170,7 +170,7 @@ i {
   font-size: 20px;
 }
 
-input[type=datetime-local] {
+input.ipt {
   background-color: #dddddd;
   color: #000000;
   border: none;
@@ -178,6 +178,10 @@ input[type=datetime-local] {
   min-height: 40px;
   min-width: 180px;
   padding: 12px 12px;
+}
+input.ipt::placeholder {
+  color: #161616;
+  font-size: 16px;
 }
 dialog {
   width: 250px;

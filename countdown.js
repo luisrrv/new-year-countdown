@@ -2,9 +2,14 @@ var countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
 var countDownDate2 = new Date("May 20, 2023 00:00:00").getTime();
 
 // countdown from input
-const input = document.querySelector('input[type=datetime-local]');
+const input = document.querySelector('.ipt');
 const calcBtn = document.querySelector('.calc-btn');
 const dialog = document.querySelector('dialog');
+
+input.onfocus = function (event) {
+  this.type = 'datetime-local';
+  this.focus();
+}
 
 
 // end of year countdown calculation
