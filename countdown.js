@@ -6,7 +6,8 @@ const input = document.querySelector('.ipt');
 const calcBtn = document.querySelector('.calc-btn');
 const dialog = document.querySelector('dialog');
 
-input.onfocus = function (event) {
+input.onfocus = function (e) {
+  e.target.focus({preventScroll: true});
   if(this.type==='text') this.blur(); 
   this.type = 'datetime-local';
   this.focus();
