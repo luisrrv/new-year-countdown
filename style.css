@@ -175,7 +175,7 @@ input.ipt {
   color: #000000;
   border: none;
   border-radius: 36px;
-  min-height: 40px;
+  min-height: 2.5rem;
   min-width: 180px;
   padding: 12px 12px;
 }

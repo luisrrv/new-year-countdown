@@ -7,6 +7,7 @@ const calcBtn = document.querySelector('.calc-btn');
 const dialog = document.querySelector('dialog');
 
 input.onfocus = function (event) {
+  this.blur();
   this.type = 'datetime-local';
   this.focus();
 }
