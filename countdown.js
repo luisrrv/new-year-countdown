@@ -101,7 +101,7 @@ calcBtn.addEventListener('click', ()=> {
     // If the count down is over, write some text
     if (distance3 < 0) {
       clearInterval(x3);
-      document.getElementById("demo4").innerHTML = "TIME'S UP!";
+      document.getElementById("demo4").innerHTML = `<span>TIME'S UP!</span>`;
     }
     calcBtn.addEventListener('click', ()=> clearInterval(x3));
   }, 1000);

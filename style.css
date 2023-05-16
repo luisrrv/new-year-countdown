@@ -126,6 +126,14 @@ i {
   animation: show 500ms linear;
   background-color: transparent;
 }
+#demo1 span,
+#demo2 span,
+#demo3 span,
+#demo4 span {
+  display: inline-block;
+  background-color: transparent;
+  animation: tilt-shaking 500ms linear;
+}
 .demo {
   font-family: "Poiret One", cursive;
   width: 80vw;
