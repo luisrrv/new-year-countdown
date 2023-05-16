@@ -4,6 +4,8 @@ var countDownDate2 = new Date("May 20, 2023 00:00:00").getTime();
 // countdown from input
 const input = document.querySelector('input[type=datetime-local]');
 const calcBtn = document.querySelector('.calc-btn');
+const dialog = document.querySelector('dialog');
+
 
 // end of year countdown calculation
 var x = setInterval(function() {
@@ -62,7 +64,8 @@ var x2 = setInterval(function() {
 // input countdown calculation
 calcBtn.addEventListener('click', ()=> {
   if (input.value === '') {
-    alert('Please choose a date');
+    // alert('Please choose a date');
+    dialog.showModal();
     return;
   }
   var x3;

@@ -20,7 +20,7 @@
   <div class="wrapper">
     <div class="top">
       <div>
-        <input type="datetime-local" name="" id="">
+        <input type="datetime-local" name="datetime" onblur="(this.type='text')" placeholder="Select a date">
         <button class="calc-btn">COUNTDOWN</button>
       </div>
       <div class="dm">
@@ -50,6 +50,12 @@
           <p class="credit">coded by <a href="https://github.com/luisrrv" target="_blank">luisrrv</a></p>
       </div>
   </div>
+  <dialog class="center" id="dialog">
+    <form method="dialog">
+      <p>Please choose a date</p>
+      <button><i class="far fa-times-circle"></i></button>
+    </form>
+  </dialog>
 </body>
 <script src="countup.js"></script>
 <script src="countdown.js"></script>

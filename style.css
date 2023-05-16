@@ -25,6 +25,12 @@ a {
 a:visited {
   color: white;
 }
+.center {
+  position: fixed;
+  left: 50%;
+  top: 34%;
+  transform: translate(-50%, -50%);
+}
 .hidden {
   height: 0 !important;
   margin: 0 !important;
@@ -170,7 +176,61 @@ input[type=datetime-local] {
   color: #000000;
   border: none;
   border-radius: 36px;
+  min-height: 40px;
+  min-width: 180px;
   padding: 12px 12px;
+}
+dialog {
+  width: 250px;
+  height: 150px;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  background-color: #252525a3;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 8px;
+}
+dialog form {
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+dialog p {
+  background-color: transparent;
+  font-size: 20px;
+  text-align: center;
+}
+dialog button {
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  background-color: transparent;
+  font-size: 20px;
+}
+dialog button i {
+  font-size: 24px;
+}
+dialog[open] {
+  animation: show 0.5s ease;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.513);
+}
+
+@keyframes show{
+  from {
+      opacity: 0;
+      scale: 98%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
 }
 
 @keyframes glowing {
