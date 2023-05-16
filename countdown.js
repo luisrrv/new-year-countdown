@@ -6,11 +6,13 @@ const input = document.querySelector('.ipt');
 const calcBtn = document.querySelector('.calc-btn');
 const dialog = document.querySelector('dialog');
 
+
 input.onfocus = function (e) {
   e.target.focus({preventScroll: true});
   if(this.type==='text') this.blur(); 
   this.type = 'datetime-local';
   this.focus();
+  if(this.value==='') this.value = new Date().toISOString().split(".")[0].slice(0, -3);
 }
 
 
