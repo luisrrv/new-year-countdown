@@ -76,6 +76,12 @@ a:visited {
   justify-content: center;
   align-items: center;
 }
+.luisxxx p span {
+  padding: 0 6px;
+  display: inline-block;
+  background-color: transparent;
+  animation: tilt-shaking 150ms infinite;
+}
 .user-cd {
   padding-bottom: 40px;
   margin-bottom: 40px;
@@ -117,6 +123,8 @@ i {
   font-size: 2rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
+  animation: show 500ms linear;
+  background-color: transparent;
 }
 .demo {
   font-family: "Poiret One", cursive;
@@ -125,6 +133,7 @@ i {
   color: #000000;
   border-radius: 20px;
   font-size: 1.2rem;
+  padding: 4px;
 }
 .footer {
   margin-top: 50px;
@@ -184,7 +193,6 @@ input.ipt {
   min-height: 2.5rem;
   min-width: 180px;
   padding: 12px 12px;
-  display: inline-block;
 }
 input.ipt::placeholder {
   color: #161616;
@@ -253,4 +261,12 @@ dialog::backdrop {
   100% {
     box-shadow: 0 0 5px 2px #292929;
   }
+}
+
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }

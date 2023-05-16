@@ -65,7 +65,7 @@ var x2 = setInterval(function() {
   // If the count down is over, write some text
   if (distance3 < 0) {
     clearInterval(x2);
-    document.getElementById("demo3").innerHTML = "🎉🎉🎉";
+    document.getElementById("demo3").innerHTML = `<span>🎉</span><span>🎉</span><span>🎉</span>`;
     document.querySelector(".luisxxx h1").innerHTML = "LUIS XXX";
   }
 }, 1000);
@@ -73,7 +73,6 @@ var x2 = setInterval(function() {
 // input countdown calculation
 calcBtn.addEventListener('click', ()=> {
   if (input.value === '') {
-    // alert('Please choose a date');
     dialog.showModal();
     return;
   }
@@ -102,7 +101,7 @@ calcBtn.addEventListener('click', ()=> {
     // If the count down is over, write some text
     if (distance3 < 0) {
       clearInterval(x3);
-      document.getElementById("demo4").innerHTML = "TIMES UP!";
+      document.getElementById("demo4").innerHTML = "TIME'S UP!";
     }
     calcBtn.addEventListener('click', ()=> clearInterval(x3));
   }, 1000);
