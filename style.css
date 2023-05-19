@@ -105,9 +105,9 @@ a:visited {
 .countdown {
   background-color: transparent;
 }
-.dark-mode input.ipt {
+/* .dark-mode input.ipt {
   filter: invert(100%);
-}
+} */
 /* .dark-mode .luisxxx h1,
 .dark-mode .luisxxx p {
   filter: invert(0%);
@@ -194,8 +194,8 @@ i {
 }
 
 input.ipt {
-  background-color: #dddddd;
-  color: #000000;
+  background-color: transparent;
+  color: #dddddd;
   border: none;
   border-radius: 36px;
   min-height: 2.5rem;
@@ -203,9 +203,17 @@ input.ipt {
   padding: 12px 12px;
 }
 input.ipt::placeholder {
-  color: #161616;
+  color: #dddddd;
   font-size: 16px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+/* .dark-mode ::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+} */
 dialog {
   width: 250px;
   height: 150px;

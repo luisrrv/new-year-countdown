@@ -97,6 +97,7 @@ calcBtn.addEventListener('click', ()=> {
     // Output the result in an element with id="demo"
     document.getElementById("demo4").innerHTML = days2 + "d " + hours2 + "h "
     + minutes2 + "m " + seconds2 + "s ";
+    document.querySelector(".countdown.user-cd .demo").innerHTML = `until ${input.value.split('T').join(' ')}`;
   
     // If the count down is over, write some text
     if (distance3 < 0) {
