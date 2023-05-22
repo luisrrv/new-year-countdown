@@ -44,31 +44,31 @@ var x = setInterval(function() {
 }, 1000);
 
 // featured countdown calculation
-var x2 = setInterval(function() {
+// var x2 = setInterval(function() {
 
-  // Get today's date and time
-  var now = new Date().getTime();
+//   // Get today's date and time
+//   var now = new Date().getTime();
 
-  // Find the distance between now and the count down date
-  var distance3 = countDownDate2 - now;
+//   // Find the distance between now and the count down date
+//   var distance3 = countDownDate2 - now;
 
-  // Time calculations for days, hours, minutes and seconds
-  var days2 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
-  var hours2 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes2 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds2 = Math.floor((distance3 % (1000 * 60)) / 1000);
+//   // Time calculations for days, hours, minutes and seconds
+//   var days2 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
+//   var hours2 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   var minutes2 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
+//   var seconds2 = Math.floor((distance3 % (1000 * 60)) / 1000);
 
-  // Output the result in an element with id="demo"
-  document.getElementById("demo3").innerHTML = days2 + "d " + hours2 + "h "
-  + minutes2 + "m " + seconds2 + "s ";
+//   // Output the result in an element with id="demo"
+//   document.getElementById("demo3").innerHTML = days2 + "d " + hours2 + "h "
+//   + minutes2 + "m " + seconds2 + "s ";
 
-  // If the count down is over, write some text
-  if (distance3 < 0) {
-    clearInterval(x2);
-    document.getElementById("demo3").innerHTML = `<span>🎉</span><span>🎉</span><span>🎉</span>`;
-    document.querySelector(".luisxxx h1").innerHTML = "LUIS XXX";
-  }
-}, 1000);
+//   // If the count down is over, write some text
+//   if (distance3 < 0) {
+//     clearInterval(x2);
+//     document.getElementById("demo3").innerHTML = `<span>🎉</span><span>🎉</span><span>🎉</span>`;
+//     document.querySelector(".luisxxx h1").innerHTML = "LUIS XXX";
+//   }
+// }, 1000);
 
 // input countdown calculation
 calcBtn.addEventListener('click', ()=> {
@@ -77,6 +77,8 @@ calcBtn.addEventListener('click', ()=> {
     return;
   }
   var x3;
+
+  // show countdown element
   document.querySelector('.countdown.user-cd').classList.remove('hidden');
 
   var countDownDate3 = new Date(input.value).getTime();
@@ -93,6 +95,7 @@ calcBtn.addEventListener('click', ()=> {
     var hours2 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes2 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
     var seconds2 = Math.floor((distance3 % (1000 * 60)) / 1000);
+
   
     // Output the result in an element with id="demo"
     document.getElementById("demo4").innerHTML = days2 + "d " + hours2 + "h "
