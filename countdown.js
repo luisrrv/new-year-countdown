@@ -39,7 +39,7 @@ var x = setInterval(function() {
   if (distance2 < 0) {
     clearInterval(x);
     document.getElementById("demo2").innerHTML = "HAPPY NEW YEAR!🎉";
-    document.querySelector(".countdown h1").innerHTML = "2023";
+    document.querySelector(".countdown h1").innerHTML = "2024";
   }
 }, 1000);
 
