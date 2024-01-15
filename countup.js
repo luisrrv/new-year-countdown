@@ -1,4 +1,5 @@
-var countUpDate = new Date("Jan 1, 2023 00:00:00").getTime();
+var currentYear = new Date().getFullYear();
+var countUpDate = new Date(`Jan 1, ${currentYear} 00:00:00`).getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {

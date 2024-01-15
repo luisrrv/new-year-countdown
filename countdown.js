@@ -1,5 +1,13 @@
-var countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
-var countDownDate2 = new Date("May 20, 2023 00:00:00").getTime();
+var currentYear = new Date().getFullYear();
+var nextYear = currentYear + 1;
+var countDownDate = new Date(`Jan 1, ${nextYear} 00:00:00`).getTime();
+// var countDownDate2 = new Date("May 20, 2023 00:00:00").getTime();
+
+// set labels
+const untilLabel = document.querySelector('.demo.until');
+const sinceLabel = document.querySelector('.demo.since');
+untilLabel && (untilLabel.innerHTML = `Until the start of ${nextYear}`);
+sinceLabel && (sinceLabel.innerHTML = `Since the start of ${currentYear}`);
 
 // countdown from input
 const input = document.querySelector('.ipt');
