@@ -12,6 +12,12 @@ body {
   color: #cfcfcf;
   transition: 500ms;
 }
+.unseen {
+  transform: translateY(18px);
+  opacity: 0;
+  z-index: -1;
+  /* font-size: 12px !important; */
+}
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -129,6 +135,7 @@ i {
   font-weight: 100;
   animation: show 500ms linear;
   background-color: transparent;
+  transition: 1s;
 }
 #demo1 span,
 #demo2 span,
@@ -146,6 +153,10 @@ i {
   border-radius: 20px;
   font-size: 1.2rem;
   padding: 4px;
+  transition: 1s;
+}
+.demo.b4 {
+  opacity: 0;
 }
 .footer {
   margin-top: 50px;

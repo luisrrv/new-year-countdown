@@ -2,6 +2,7 @@ var currentYear = new Date().getFullYear();
 var countUpDate = new Date(`Jan 1, ${currentYear} 00:00:00`).getTime();
 
 // Update the count down every 1 second
+var countUpLabel = document.getElementById("demo1");
 var x = setInterval(function() {
 
   // Get today's date and time
@@ -19,12 +20,14 @@ var x = setInterval(function() {
 
 
   // Output the result in an element with id="demo"
-  document.getElementById("demo1").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  if (countUpLabel) {
+    countUpLabel.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    countUpLabel.classList.remove('unseen');
+  }
 
   // If the count down is over, write some text
   if (distance1 < 0) {
     clearInterval(x);
-    document.getElementById("demo1").innerHTML = "EXPIRED";
+    countUpLabel && (countUpLabel.innerHTML = "EXPIRED");
   }
 }, 1000);

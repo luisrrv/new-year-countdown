@@ -6,8 +6,18 @@ var countDownDate = new Date(`Jan 1, ${nextYear} 00:00:00`).getTime();
 // set labels
 const untilLabel = document.querySelector('.demo.until');
 const sinceLabel = document.querySelector('.demo.since');
-untilLabel && (untilLabel.innerHTML = `Until the start of ${nextYear}`);
-sinceLabel && (sinceLabel.innerHTML = `Since the start of ${currentYear}`);
+if (untilLabel) {
+  untilLabel.innerHTML = `Until the start of ${nextYear}`;
+  setTimeout(() => {
+    untilLabel.classList.remove('b4');
+  },500);
+}
+if (sinceLabel) {
+  sinceLabel.innerHTML = `Since the start of ${currentYear}`;
+  setTimeout(() => {
+    sinceLabel.classList.remove('b4');
+  },500);
+}
 
 // countdown from input
 const input = document.querySelector('.ipt');
@@ -25,6 +35,7 @@ input.onfocus = function (e) {
 
 
 // end of year countdown calculation
+var countDownLabel = document.getElementById("demo2");
 var x = setInterval(function() {
 
   // Get today's date and time
@@ -40,13 +51,15 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance2 % (1000 * 60)) / 1000);
 
   // Output the result in an element with id="demo"
-  document.getElementById("demo2").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  if (countDownLabel) {
+    countDownLabel.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    countDownLabel.classList.remove('unseen');
+  }
 
   // If the count down is over, write some text
   if (distance2 < 0) {
     clearInterval(x);
-    document.getElementById("demo2").innerHTML = "HAPPY NEW YEAR!🎉";
+    countDownLabel && (countDownLabel.innerHTML = "HAPPY NEW YEAR!🎉");
     document.querySelector(".countdown h1").innerHTML = "2024";
   }
 }, 1000);
