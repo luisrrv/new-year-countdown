@@ -21,7 +21,11 @@ var x = setInterval(function() {
 
   // Output the result in an element with id="demo"
   if (countUpLabel) {
-    countUpLabel.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    // countUpLabel.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    countUpLabel.innerHTML = `<span class='digits'>${days}<span class='digits-label'>days</span></span> 
+                              <span class='digits'>${hours}<span class='digits-label'>hours</span></span> 
+                              <span class='digits'>${minutes}<span class='digits-label'>minutes</span></span> 
+                              <span class='digits'>${seconds}<span class='digits-label'>seconds</span></span> `;;
     countUpLabel.classList.remove('unseen');
   }
 

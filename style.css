@@ -43,6 +43,12 @@ a:visited {
   padding: 0 !important;
   opacity: 0 !important;
 }
+.hidden > * {
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 0 !important;
+}
 .top {
   display: flex;
   justify-content: space-between;
@@ -51,17 +57,19 @@ a:visited {
   width: 100%;
   /* height: 62px; */
 }
-.top div {
+/* .top div { */
   /* height: 100%; */
-}
+/* } */
 .calc-btn {
   border: none;
   padding: 12px 12px;
+  padding-bottom: 14px;
   border-radius: 36px;
   background-color: #161616;
   min-height: 2.5rem;
   /* color: #292929; */
   animation: glowing 4000ms infinite;
+  font-size: 16px;
 }
 .content {
   margin: 28px 0;
@@ -83,7 +91,7 @@ a:visited {
   align-items: center;
 }
 .luisxxx p span,
-.user-cd p span {
+.user-cd p span.timesup {
   color: #161616;
   padding: 0 6px;
   display: inline-block;
@@ -96,8 +104,9 @@ a:visited {
 } */
 .luisxxx, .user-cd {
   background-color: #cfcfcf !important;
+  /* border: solid 2px #cfcfcf; */
   margin-bottom: 40px;
-  border-radius: 24px;
+  border-radius: 20px;
   box-shadow: 0 5px 0 0 rgb(210, 210, 210), 0 10px 0 0 rgba(225, 225, 225, 0.6), 0 15px 0 0 rgba(159, 160, 159, 0.4), 0 20px 0 0 rgba(128, 128, 128, 0.2), 0 25px 0 0 rgba(78, 78, 78, 0.1);
 }
 .luisxxx h1,
@@ -130,26 +139,79 @@ i {
 #demo2,
 #demo3,
 #demo4 {
-  font-size: 2rem;
+  display: flex;
+  gap: 4px;
+  font-size: 1.6rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
   animation: show 500ms linear;
   background-color: transparent;
   transition: 1s;
 }
-#demo1 span,
-#demo2 span,
-#demo3 span,
-#demo4 span {
+#demo1 span.timesup,
+#demo2 span.timesup,
+#demo3 span.timesup,
+#demo4 span.timesup {
   display: inline-block;
   background-color: transparent;
   animation: tilt-shaking 500ms linear;
+  font-size: 2rem;
+}
+#demo1:has(.timesup),
+#demo2:has(.timesup),
+#demo3:has(.timesup),
+#demo4:has(.timesup) {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#demo1 span:not(.timesup),
+#demo2 span:not(.timesup),
+#demo3 span:not(.timesup),
+#demo4 span:not(.timesup) {
+  background-color: #dddddd;
+  color: #1f1f1f;
+  border-radius: 8px;
+  padding: 2px 2px;
+  padding-top: 12px;
+  width: 60px !important;
+  margin: 8px 0;
+}
+.user-cd #demo1 span:not(.timesup),
+.user-cd #demo2 span:not(.timesup),
+.user-cd #demo3 span:not(.timesup),
+.user-cd #demo4 span:not(.timesup) {
+  background-color: #1f1f1f;
+  color: #dddddd;
+  border-radius: 8px;
+  padding: 2px 2px;
+  padding-top: 12px;
+  width: 60px !important;
+  margin: 8px 0;
+}
+#demo1 span.digits,
+#demo2 span.digits,
+#demo3 span.digits,
+#demo4 span.digits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#demo1 span.digits-label,
+#demo2 span.digits-label,
+#demo3 span.digits-label,
+#demo4 span.digits-label {
+  font-size: 10px;
+  margin: 0 !important;
+  color: #000000;
 }
 .demo {
   font-family: "Poiret One", cursive;
   width: 80vw;
-  background-color: #dddddd;
-  color: #000000;
+  /* background-color: #dddddd; */
+  color: #dddddd;
   border-radius: 20px;
   font-size: 1.2rem;
   padding: 4px;
@@ -189,8 +251,8 @@ i {
 .darkmodebutton {
   border: none;
   background: #1f1f1f;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 45px;
   text-decoration: none;
   cursor: pointer;

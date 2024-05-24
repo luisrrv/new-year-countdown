@@ -52,7 +52,11 @@ var x = setInterval(function() {
 
   // Output the result in an element with id="demo"
   if (countDownLabel) {
-    countDownLabel.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    // countDownLabel.innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+    countDownLabel.innerHTML = `<span class='digits'>${days}<span class='digits-label'>days</span></span> 
+                                <span class='digits'>${hours}<span class='digits-label'>hours</span></span> 
+                                <span class='digits'>${minutes}<span class='digits-label'>minutes</span></span> 
+                                <span class='digits'>${seconds}<span class='digits-label'>seconds</span></span> `;
     countDownLabel.classList.remove('unseen');
   }
 
@@ -60,7 +64,7 @@ var x = setInterval(function() {
   if (distance2 < 0) {
     clearInterval(x);
     countDownLabel && (countDownLabel.innerHTML = "HAPPY NEW YEAR!🎉");
-    document.querySelector(".countdown h1").innerHTML = "2024";
+    document.querySelector(".countdown h1").innerHTML = "2025";
   }
 }, 1000);
 
@@ -119,14 +123,17 @@ calcBtn.addEventListener('click', ()=> {
 
   
     // Output the result in an element with id="demo"
-    document.getElementById("demo4").innerHTML = days2 + "d " + hours2 + "h "
-    + minutes2 + "m " + seconds2 + "s ";
+    // document.getElementById("demo4").innerHTML = days2 + "d " + hours2 + "h " + minutes2 + "m " + seconds2 + "s ";
+    document.getElementById("demo4").innerHTML = `<span class='digits'>${days2}<span class='digits-label'>days</span></span> 
+                                                  <span class='digits'>${hours2}<span class='digits-label'>hours</span></span> 
+                                                  <span class='digits'>${minutes2}<span class='digits-label'>minutes</span></span> 
+                                                  <span class='digits'>${seconds2}<span class='digits-label'>seconds</span></span> `;;
     document.querySelector(".countdown.user-cd .demo").innerHTML = `until ${input.value.split('T').join(' ')}`;
   
     // If the count down is over, write some text
     if (distance3 < 0) {
       clearInterval(x3);
-      document.getElementById("demo4").innerHTML = `<span>TIME'S UP!</span>`;
+      document.getElementById("demo4").innerHTML = `<span class='timesup'>TIME'S UP!</span>`;
     }
     calcBtn.addEventListener('click', ()=> clearInterval(x3));
   }, 1000);

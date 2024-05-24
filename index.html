@@ -23,7 +23,7 @@
         <input class="ipt" type="text" name="datetime" placeholder="Select a date">
       </div>
       <div class="dm">
-        <button class="calc-btn">COUNTDOWN</button>
+        <button class="calc-btn">Countdown</button>
         <button id="btn" class="darkmodebutton" onclick="darkMode()"><i class="fas fa-sun"></i></button>
       </div>
     </div>
@@ -31,7 +31,12 @@
       <div class="content-top">
         <div class="countdown user-cd hidden">
           <h1 class="demo">Countdown</h1>
-          <p id="demo4">0D 0H 0M 0S</p>
+          <!-- <p id="demo4">0D 0H 0M 0S</p> -->
+          <p id="demo4">
+            <span class='digits'>0<span class='digits-label'>Days</span></span>
+            <span class='digits'>0<span class='digits-label'>Hours</span></span>
+            <span class='digits'>0<span class='digits-label'>Seconds</span></span>
+          </p>
         </div>
       </div>
       <div class="content-bottom">
@@ -40,17 +45,27 @@
           <p id="demo3"></p>
         </div> -->
         <div class="countdown">
-          <p id="demo2" class="unseen">0D 0H 0M 0S</p>
+          <!-- <p id="demo2" class="unseen">0D 0H 0M 0S</p> -->
+          <p id="demo2" class="unseen">
+            <span class='digits'>0<span class='digits-label'>Days</span></span>
+            <span class='digits'>0<span class='digits-label'>Hours</span></span>
+            <span class='digits'>0<span class='digits-label'>Seconds</span></span>
+          </p>
           <h1 class="demo until b4"></h1>
         </div>
         <div class="countup">
-          <p id="demo1" class="unseen">0D 0H 0M 0S</p>
+          <!-- <p id="demo1" class="unseen">0D 0H 0M 0S</p> -->
+          <p id="demo1" class="unseen">
+            <span class='digits'>0<span class='digits-label'>Days</span></span>
+            <span class='digits'>0<span class='digits-label'>Hours</span></span>
+            <span class='digits'>0<span class='digits-label'>Seconds</span></span>
+          </p>
           <h1 class="demo since b4"></h1>
         </div>
       </div>
       </div>
       <div class="footer">
-          <p class="credit">coded by <a href="https://github.com/luisrrv" target="_blank">luisrrv</a></p>
+          <p class="credit">by <a href="https://github.com/luisrrv" target="_blank">luisrrv</a></p>
       </div>
   </div>
   <dialog class="center" id="dialog">
