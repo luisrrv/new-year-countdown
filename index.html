@@ -19,11 +19,12 @@
 <body>
   <div class="wrapper">
     <div class="top">
-      <div>
-        <input class="ipt" type="text" name="datetime" placeholder="Select a date">
+      <div class="left">
+        <input class="ipt" type="text" name="datetime" placeholder="Add Countdown Date">
+        <div class="divider"></div>
+        <button class="calc-btn">Start</button>
       </div>
       <div class="dm">
-        <button class="calc-btn">Countdown</button>
         <button id="btn" class="darkmodebutton" onclick="darkMode()"><i class="fas fa-sun"></i></button>
       </div>
     </div>
@@ -70,7 +71,7 @@
   </div>
   <dialog class="center" id="dialog">
     <form method="dialog">
-      <p>Please choose a date</p>
+      <p>Please add a countdown date</p>
       <button><i class="far fa-times-circle"></i></button>
     </form>
   </dialog>

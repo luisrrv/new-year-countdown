@@ -60,15 +60,27 @@ a:visited {
 /* .top div { */
   /* height: 100%; */
 /* } */
+
+.top .left {
+  border-radius: 36px;
+  animation: glowing 4000ms infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  background-color: #ababab;
+  width: 1px;
+  height: 18px
+}
+
 .calc-btn {
   border: none;
-  padding: 12px 12px;
+  padding: 12px;
   padding-bottom: 14px;
-  border-radius: 36px;
-  background-color: #161616;
+  border-radius: 0 36px 36px 0;
   min-height: 2.5rem;
-  /* color: #292929; */
-  animation: glowing 4000ms infinite;
   font-size: 16px;
 }
 .content {
@@ -276,16 +288,27 @@ input.ipt {
   background-color: transparent;
   color: #dddddd;
   border: none;
-  border-radius: 36px;
+  border-radius: 36px 0 0 36px;
   min-height: 2.5rem;
   min-width: 180px;
   padding: 12px 12px;
+  margin-right: 4px;
+  /* color-scheme: dark; */
+}
+input.ipt:focus-visible {
+    border-color: transparent;
+    outline: none;
+}
+input.ipt::-webkit-datetime-edit-year-field:focus,
+input.ipt::-webkit-datetime-edit-month-field:focus,
+input.ipt::-webkit-datetime-edit-day-field:focus,
+input.ipt::-webkit-datetime-edit-hour-field:focus,
+input.ipt::-webkit-datetime-edit-minute-field:focus {
+  background: #FFF; color: #000;
 }
 input.ipt::placeholder {
   color: #dddddd;
   font-size: 16px;
-  text-decoration: underline;
-  text-underline-offset: 3px;
 }
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
@@ -348,13 +371,13 @@ dialog::backdrop {
 
 @keyframes glowing {
   0% {
-    box-shadow: 0 0 5px 2px #292929;
+    box-shadow: 0 0 0px 0px #292929;
   }
   50% {
     box-shadow: 0 0 5px 2px #696969;
   }
   100% {
-    box-shadow: 0 0 5px 2px #292929;
+    box-shadow: 0 0 0px 0px #292929;
   }
 }
 
